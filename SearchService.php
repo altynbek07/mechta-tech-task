@@ -13,7 +13,7 @@ class SearchService
     ) {
     }
 
-    public function handleSearch(SearchRequest $request): void
+    public function handleSearch(SearchRequestDTO $request): void
     {
         if ($request->getSearchId()) {
             $results = $this->searchRepository->getResultsBySearchId($request->getSearchId());
