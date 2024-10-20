@@ -2,7 +2,7 @@
 
 namespace vBulletin\Search;
 
-class SearchRequest
+class SearchRequestDTO
 {
     private ?int $searchId;
     private ?string $query;
