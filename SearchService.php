@@ -3,11 +3,13 @@
 namespace vBulletin\Search;
 
 use Psr\Log\LoggerInterface;
+use vBulletin\Search\Repository\SearchRepositoryInterface;
+use vBulletin\Search\Renderer\RendererInterface;
 
 class SearchService
 {
     public function __construct(
-        private SearchRepository $searchRepository,
+        private SearchRepositoryInterface $searchRepository,
         private LoggerInterface $logger,
         private RendererInterface $renderer
     ) {
