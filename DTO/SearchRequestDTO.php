@@ -1,6 +1,6 @@
 <?php
 
-namespace vBulletin\Search;
+namespace vBulletin\Search\DTO;
 
 class SearchRequestDTO
 {
