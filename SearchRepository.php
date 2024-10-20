@@ -2,7 +2,7 @@
 
 namespace vBulletin\Search;
 
-class SearchRepository
+class SearchRepository implements SearchRepositoryInterface
 {
     public function __construct(private \PDO $db)
     {
