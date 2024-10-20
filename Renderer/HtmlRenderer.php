@@ -8,13 +8,20 @@ class HtmlRenderer implements RendererInterface
   
     public function renderSearchResults(array $results): void
     {
-        global $render; // TODO: Плохая практика использовать глобальные переменные
-      
-        foreach($results as $row) {
-            if ($row['forumid'] !== self::EXCLUDE_FORUMID){
-                $render->render_searh_result($row);
+        if (empty($results)) {
+            echo "<p>No results found.</p>";
+            return;
+        }
+
+        echo "<ul>";
+        foreach($results as result) {
+            if (result['forumid'] !== self::EXCLUDE_FORUMID) {
+                echo "<li>";
+                echo "<p>" . htmlspecialchars($result['text'] ?? "") . "</p>";
+                echo "</li>";
             }
         }
+        echo "</ul>";
     }
 
     public function renderSearchForm(): void
