@@ -1,6 +1,6 @@
 <?php
 
-namespace vBulletin\Search;
+namespace vBulletin\Search\Repository;
 
 class SearchRepository implements SearchRepositoryInterface
 {
